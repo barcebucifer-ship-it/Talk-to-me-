@@ -1,0 +1,13 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Talk To Me</title><link rel="stylesheet" href="style.css"></head>
+<body><main><h1>Talk To Me</h1><p class="sub">Sala privada para dos personas</p>
+<section id="home" class="card"><button id="create">Crear sala privada</button>
+<div class="join"><input id="room" placeholder="Código de sala"><button id="join">Entrar</button></div></section>
+<section id="invite" class="card hidden"><b>Tu enlace privado</b><input id="link" readonly><button id="copy">Copiar invitación</button><p id="wait">Esperando invitado…</p></section>
+<section id="approval" class="card hidden"><b>Alguien quiere entrar</b><div class="row"><button id="accept">Aceptar</button><button id="reject" class="red">Rechazar</button></div></section>
+<section id="call" class="hidden"><div class="videos"><video id="remote" autoplay playsinline></video><video id="local" autoplay muted playsinline></video></div>
+<div class="controls"><button id="mic">🎙️</button><button id="cam">📷</button><button id="flip">🔄</button><button id="hang" class="red">☎️</button></div>
+<div class="card"><div id="messages"></div><div class="join"><input id="msg" placeholder="Escribe un mensaje"><button id="send">Enviar</button></div>
+<label class="file">📎 Enviar foto/video<input id="file" type="file" accept="image/*,video/*"></label></div></section>
+<p id="status"></p></main><script src="/socket.io/socket.io.js"></script><script src="app.js"></script></body></html>
